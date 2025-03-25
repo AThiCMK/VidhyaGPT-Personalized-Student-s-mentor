@@ -1,0 +1,113 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #9b4dca, #6a1b9a);
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #9b4dca, #6a1b9a);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container takes full height of the screen */
+}
+
+.chatbox {
+    width: 90%;
+    max-width: 800px; /* Adjust to your preference */
+    height: 90vh; /* Takes up 90% of the screen height */
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #eee;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Message container */
+.chatbox__messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    opacity: 0.9;
+    padding-left: 20px;
+}
+
+/* Styling for user and assistant messages */
+.user-message {
+    align-self: flex-end;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 20px 20px 0 20px;
+    max-width: 70%;
+    margin-left: auto;
+}
+
+.assistant-message {
+    align-self: flex-start;
+    background-color: #e1f5fe;
+    color: #000;
+    border-radius: 20px 20px 20px 0;
+    max-width: 70%;
+}
+
+.message {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    max-width: 70%;
+}
+
+.message-content {
+    word-wrap: break-word;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-danger-recording {
+    background-color: #E91E63 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#record-btn {
+    background-color: #FF4081;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+    #record-btn:hover {
+        transform: scale(1.1); /* Add hover effect */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #record-btn:active {
+        background-color: #E91E63;
+    }
