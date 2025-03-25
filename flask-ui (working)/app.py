@@ -15,7 +15,7 @@ query_engine = initialize_conversation_bot()
 
 @app.route('/')
 def home():
-    return render_template('index1.html', timestamp=int(time.time()))
+    return render_template('index.html', timestamp=int(time.time()))
 
 @app.route('/ask_audio', methods=['POST'])
 def ask_audio():
